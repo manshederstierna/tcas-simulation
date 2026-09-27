@@ -1,5 +1,32 @@
 package simulator;
-import java.util.*;
 
+public class Aircraft {
+    private String name;
+    private Vector3 position;
+    private Vector3 direction;
+    private double speed;
 
-public record Aircraft(String name, double x, double y, double z, double speed){}
+    public Aircraft(
+        String name,
+        Vector3 position,
+        Vector3 direction,
+        double speed
+    ) {
+        this.name = name;
+        this.position = position;
+        this.direction = direction;
+        this.speed = speed;
+    }
+
+    public Vector3 getPosition() {
+        return position;
+    }
+
+    public Vector3 getDirection() {
+        return direction;
+    }
+
+    public double getSpeed() {
+        return speed;
+    }
+}

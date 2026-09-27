@@ -42,22 +42,6 @@ public class App extends Application {
 		Simulation sim = new Simulation(as);
 		List<Sphere> models = new ArrayList<>();
 		
-		for(var a : sim.getAircraft()){
-			Sphere sphere = new Sphere(30);
-			sphere.setTranslateX(a.x());
-			sphere.setTranslateY(a.y());
-			sphere.setTranslateZ(a.z());
-			models.add(sphere);
-		}
-		
-		Group planes = new Group();
-		
-		for(var a : models){
-			planes.getChildren().add(a);
-		}
-		
-		
-		
 		
 		
 		
