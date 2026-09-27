@@ -1,15 +1,17 @@
 package simulator;
 
-import java.util.List;
+import java.util.*;
 
 public class Airspace{
-	List<Aircraft> aircrafts;
+	ArrayList<Aircraft> aircrafts = new ArrayList<>();
 	
-	public Airspace(List<Aircraft> aircrafts){
-		this.aircrafts = aircrafts;
-	}
+	public Airspace(){}
 	
 	public void addAircraft(Aircraft ac){
 		aircrafts.add(ac);
+	}
+	
+	public ArrayList<Aircraft> getAircraft(){
+		return aircrafts;	
 	}
 }
