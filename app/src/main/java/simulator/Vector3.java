@@ -34,4 +34,14 @@ public class Vector3 {
     public void setZ(double z) {
         this.z = z;
     }
+	
+	public Vector3 add(Vector3 other){
+		return new Vector3(this.x + other.x, this.y + other.y, this.z + other.z);
+	}
+	
+	public void addScaled(Vector3 other, double scale) {
+		x += other.getX() * scale;
+		y += other.getY() * scale;
+		z += other.getZ() * scale;
+	}
 }

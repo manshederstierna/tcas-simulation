@@ -29,4 +29,9 @@ public class Aircraft {
     public double getSpeed() {
         return speed;
     }
+	public void update(double dt) {
+		position.addScaled(direction, speed * dt);
+	}
+	
+
 }

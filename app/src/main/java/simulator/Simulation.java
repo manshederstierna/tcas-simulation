@@ -22,6 +22,13 @@ public class Simulation{
 	public List<Aircraft> getAircraft(){
 		return as.getAircraft();
 	}
+
+    public void update(double dt) {
+        for(var airplane : as.getAircraft()){
+			airplane.update(dt);
+		}
+    }
+	
 	
 	
 }
