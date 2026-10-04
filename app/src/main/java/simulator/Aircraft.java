@@ -6,7 +6,7 @@ public class Aircraft {
     private Vector3 direction;
     private double speed;
 	private double length;
-
+	
     public Aircraft(
         String callsign,
         Vector3 position,
