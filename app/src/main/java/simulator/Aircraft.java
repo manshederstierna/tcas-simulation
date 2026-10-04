@@ -5,19 +5,26 @@ public class Aircraft {
     private Vector3 position;
     private Vector3 direction;
     private double speed;
+	private double length;
 
     public Aircraft(
         String callsign,
         Vector3 position,
         Vector3 direction,
         double speed
+		double length;
     ) {
         this.callsign = callsign;
         this.position = position;
         this.direction = direction;
         this.speed = speed;
+		this.length = length;
     }
-
+	
+	public double getLength(){
+		return length;
+	}
+	
     public Vector3 getPosition() {
         return position;
     }
