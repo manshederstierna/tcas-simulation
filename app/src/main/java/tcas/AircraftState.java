@@ -1,6 +1,6 @@
 package tcas;
 
-public Enum{
+public enum AircraftState{
 	NORMAL,
     TRAFFIC_ADVISORY,
     RESOLUTION_ADVISORY
