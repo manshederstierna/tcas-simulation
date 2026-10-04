@@ -1,18 +1,18 @@
 package simulator;
 
 public class Aircraft {
-    private String name;
+    private final String callsign;
     private Vector3 position;
     private Vector3 direction;
     private double speed;
 
     public Aircraft(
-        String name,
+        String callsign,
         Vector3 position,
         Vector3 direction,
         double speed
     ) {
-        this.name = name;
+        this.callsign = callsign;
         this.position = position;
         this.direction = direction;
         this.speed = speed;

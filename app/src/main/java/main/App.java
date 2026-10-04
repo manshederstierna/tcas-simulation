@@ -1,4 +1,4 @@
-package org.example;
+package main;
 
 import simulator.*;
 import java.util.*;
