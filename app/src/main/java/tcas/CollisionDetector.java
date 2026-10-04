@@ -6,7 +6,7 @@ public class CollisionDetector{
 	private final double minimumDistance = 5;
 	
 	
-	public boolean willCollide(Aircraft a, Aircraft b){
+	public CollisionPrediction predict(Aircraft a, Aircraft b){
 		Vector3 aPos = a.getPosition();
 		Vector3 bPos = b.getPosition();
 		
@@ -19,13 +19,9 @@ public class CollisionDetector{
 		double tClosest = -(relativePosition.dot(relativeVelocity)/(relativeVelocity.dot(relativeVelocity)));	
 		Vector3 closestVector = relativePosition.add(relativeVelocity.scale(tClosest));
 		double dClosest = closestVector.length();
-		
-		// if the closest collision happens in the past
-		if (tClosest < 0) {
-			return false;
-		}
-		
-		return dClosest < minimumDistance;
+
+		boolean conflict = dClosest < minimumDistance;
+		return new CollisionPrediction(conflict, tClosest, dClosest);
 	}
 	
 	
